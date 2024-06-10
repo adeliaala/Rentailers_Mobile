@@ -294,9 +294,6 @@ class _SignUpPageState extends State<SignUpPage> {
                   const SizedBox(
                     height: 20,
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
                   RegisterField(
                     controller: passwordController,
                     prefixIcon: Icons.key,
@@ -376,7 +373,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                          disabledBackgroundColor: bluetogreenColor,
+                          backgroundColor: Color.fromARGB(255, 23, 173, 248),
+                        //disabledBackgroundColor: bluetogreenColor,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           )),

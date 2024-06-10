@@ -21,15 +21,15 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   CarouselController carouselController = CarouselController();
 
   List<String> titles = [
-    'Selamat datang di Aplikasi mobile_apps',
-    'Kenapa harus mobile_apps?',
+    'Selamat datang di Aplikasi rentailers',
+    'Kenapa harus rentailers?',
     'Cepat, Mudah, dan Solusi Keluarga!'
   ];
 
   List<String> subtitles = [
     'Temukan mobil solusi terbaik untuk perjalanan Anda',
     'Kami memberikan Anda akses ke beragam jenis mobil dengan spesifikasi yang unggul dan nyaman untuk dibawa perjalanan',
-    'Jadilah bagian dari mobile_apps family. Ayo mulai perjalanan Anda bersama Keluarga tercinta dengan Aplikasi mobile_apps'
+    'Jadilah bagian dari rentailers family. Ayo mulai perjalanan Anda bersama Keluarga tercinta dengan Aplikasi rentailers'
   ];
 
   @override

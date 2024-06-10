@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_apps/models/logincustomers.dart';
+import '../Theme.dart';
 import 'edit_profile_page.dart';
 import 'login.dart'; // Import halaman LoginPage
 
@@ -36,6 +37,10 @@ class _ProfilePageState extends State<ProfilePage> {
             SizedBox(height: 10),
             Text('Email: ${customer.email}', style: TextStyle(fontSize: 18)),
             SizedBox(height: 20),
+            Text('Nomor Telepon: 082921930284', style: TextStyle(fontSize: 18)),
+            SizedBox(height: 20),
+            Text('Alamat: Situbondo, Jawa Timur', style: TextStyle(fontSize: 18)),
+            SizedBox(height: 20),
             Center(
               child: ElevatedButton(
                 onPressed: () async {
@@ -52,7 +57,14 @@ class _ProfilePageState extends State<ProfilePage> {
                     });
                   }
                 },
-                child: Text('Edit Profil'),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 23, 173, 248),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    )),
+                child: Text('Edit Profil',style: whitekTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 17)),
               ),
             ),
             Spacer(), // Spacer untuk menempatkan tombol di bagian bawah
@@ -65,7 +77,17 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 );
               },
-              child: Text('Log Out'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 23, 173, 248),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                )),
+
+              child: Text('Log Out'
+                ,style: whitekTextStyle.copyWith(
+                fontWeight: bold,
+                fontSize: 17,
+              ),),
             ),
           ],
         ),

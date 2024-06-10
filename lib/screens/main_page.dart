@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_apps/models/logincustomers.dart';
 import 'dashboard.dart';
-import 'favorit.dart';
+//import 'favorit.dart';
 import 'pesanan.dart';
 import 'profil_page.dart'; // Mengimpor profile_page.dart
-import 'package:mobile_apps/models/registermodel.dart'; // Mengimpor register_model.dart
+//import 'package:mobile_apps/models/registermodel.dart'; // Mengimpor register_model.dart
 
 class MainPage extends StatefulWidget {
   @override
@@ -29,7 +29,7 @@ final LoginCustomerModel user = LoginCustomerModel(
     super.initState();
     _pages = <Widget>[
       DashboardPage(),
-      FavoritPage(),
+      //FavoritPage(),
       PesananPage(),
       ProfilePage(customer: user),
 
@@ -48,26 +48,27 @@ final LoginCustomerModel user = LoginCustomerModel(
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Color.fromARGB(255, 23, 173, 248),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_rounded, color: Colors.blueAccent),
-            label: 'Home', // Menambahkan label untuk item Home
+            icon: Icon(Icons.home_rounded, color: Colors.white),
+            label: '', // Menambahkan label untuk item Home
           ),
-          BottomNavigationBarItem(
+          /*BottomNavigationBarItem(
             icon: Icon(Icons.favorite, color: Colors.blueAccent),
             label: 'Favorite', // Menambahkan label untuk item Favorite
+          ),*/
+          BottomNavigationBarItem(
+            icon: Icon(Icons.history_rounded, color: Colors.white),
+            label: '', // Menambahkan label untuk item History
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.history_rounded, color: Colors.blueAccent),
-            label: 'History', // Menambahkan label untuk item History
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person, color: Colors.blueAccent),
-            label: 'Profile', // Menambahkan label untuk item Profile
+            icon: Icon(Icons.person, color: Colors.white),
+            label: '', // Menambahkan label untuk item Profile
           ),
         ],
         currentIndex: _selectedIndex,
+        selectedItemColor: Colors.white,
         onTap: _onItemTapped,
       ),
     );

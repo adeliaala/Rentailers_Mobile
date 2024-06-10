@@ -72,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                           },
                           prefixIcon: Icons.mail),
                       const SizedBox(
-                        height: 50,
+                        height: 20,
                       ),
                       RegisterField(
                         controller: passwordController,
@@ -101,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                             );
                           },
                           style: ElevatedButton.styleFrom(
-                              disabledBackgroundColor: bluetogreenColor,
+                              backgroundColor: Color.fromARGB(255, 23, 173, 248),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
                               )),

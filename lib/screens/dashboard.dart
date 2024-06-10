@@ -3,7 +3,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:mobile_apps/Theme.dart';
 import 'package:mobile_apps/models/mobil_models.dart';
 import 'package:mobile_apps/widgets/mobil_card.dart';
- // Import file CardMobil
 
 class DashboardPage extends StatelessWidget {
   final List<String> imgList = [
@@ -14,37 +13,47 @@ class DashboardPage extends StatelessWidget {
     'assets/mobil 5.jpg',
   ];
 
-  // Dummy data for cars
   final List<MobilSayaModel> mobilList = [
     MobilSayaModel(
-      nopol: "ABC123",
-      merkmobil: "Toyota Camry",
-      harga: 200000000,
-      type: "Sedan",
+      nopol: "P1234XY",
+      merkmobil: "Toyota Avanza",
+      harga: 250000,
+      type: "1.3 E M/T",
       status: "Tersedia",
-      gambar: "assets/mobil 1.jpg",
+      gambar: "assets/avanza.webp",
       deskripsi: "Lorem ipsum dolor sit amet",
       createdAt: DateTime.now(),
       updatedAt: DateTime.now(),
     ),
     MobilSayaModel(
-      nopol: "DEF456",
-      merkmobil: "Honda Civic",
-      harga: 180000000,
-      type: "Sedan",
+      nopol: "DK1281NA",
+      merkmobil: "Honda Jazz",
+      harga: 300000,
+      type: "1.5 RS CVT",
       status: "Tersedia",
-      gambar: "assets/mobil 2.jpg",
+      gambar: "assets/honda jazz.webp",
       deskripsi: "Lorem ipsum dolor sit amet",
       createdAt: DateTime.now(),
       updatedAt: DateTime.now(),
     ),
     MobilSayaModel(
       nopol: "GHI789",
-      merkmobil: "Nissan Altima",
-      harga: 220000000,
-      type: "Sedan",
+      merkmobil: "Toyota Innova",
+      harga: 350000,
+      type: "Venturer A/T",
       status: "Tersedia",
-      gambar: "assets/mobil 3.jpg",
+      gambar: "assets/innova.webp",
+      deskripsi: "Lorem ipsum dolor sit amet",
+      createdAt: DateTime.now(),
+      updatedAt: DateTime.now(),
+    ),
+    MobilSayaModel(
+      nopol: "N4385YA",
+      merkmobil: "Suzuki Ertiga",
+      harga: 320000,
+      type: "GL M/T",
+      status: "Tersedia",
+      gambar: "assets/ertiga.jpg",
       deskripsi: "Lorem ipsum dolor sit amet",
       createdAt: DateTime.now(),
       updatedAt: DateTime.now(),
@@ -162,16 +171,16 @@ class DashboardPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 12),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: mobilList.map((mobil) {
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: CardMobil(mobil: mobil),
-                  );
-                }).toList(),
-              ),
+            GridView.count(
+              crossAxisCount: 2,
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              children: mobilList.map((mobil) {
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CardMobil(mobil: mobil),
+                );
+              }).toList(),
             ),
           ],
         ),

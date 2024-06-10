@@ -64,6 +64,10 @@ flutter:
     - assets/familytrip.jpg
     - assets/sedan.jpg
     - assets/whitecar.jpg
+    - assets/honda jazz.webp
+    - assets/innova.webp
+    - assets/avanza.webp
+    - assets/ertiga.jpg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
